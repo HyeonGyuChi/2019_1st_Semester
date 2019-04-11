@@ -1,4 +1,3 @@
-import sys
 
 def find_linear_max(arr):
     max, sum = [0]*2
@@ -24,7 +23,7 @@ def find_linear_max(arr):
 ## 원소를 가져오며 sum을 더하면서 실시간으로 max를 비교하여 max를 지정하고
 ## sum을 초기화해줄때는 가져온 원소값이 음수일경우와 기존에 sum값이 음수일경우
 def find_linear_max2(arr) :
-    max = -sys.maxsize -1
+    max = arr[0] # -sys.maxsize-1로 최소값을 초기화해출필요x > 어떤값인지 알기때문에 만약 어떤값인지 모른다면 입력할수 있는 수중 가장 작은수를 입력
     sum = 0
 
     for num in arr :
@@ -40,7 +39,7 @@ def find_linear_max2(arr) :
     return max
 
 alist = [2,1,-3,1,0,-4,1,1,3,4]
-alist = [-2,-1,-4,-2,-3 ]
+alist = [-2,-1-4,-2,2,-3 ]
 print(find_linear_max2(alist))
 
 

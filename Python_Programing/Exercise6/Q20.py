@@ -1,3 +1,6 @@
+# 2진수 > 16진수
+# binary > hexadecimal
+
 h2b = { '0000':'0', '0001':'1', '0010':'2', '0011':'3',
 	'0100':'4', '0101':'5', '0110':'6', '0111':'7',
 	'1000':'8', '1001':'9', '1010':'a', '1011':'b',
@@ -39,4 +42,43 @@ while True:
         print(" =>", bin, ":", hex)
     else:
         print(" => 2진수가 아니어서 종료합니다")
+        break
+
+# 2진수 > 8진수
+# binary > octadecimal : This algorithm is better then upper one.
+
+o2b = { '000':'0', '001':'1', '010':'2', '011':'3',
+	'100':'4', '101':'5', '110':'6', '111':'7'}
+
+
+def bin2oct(bin) :
+    oct = "0o"
+    temp ='' # 3개씩 끊어서 가져와 dic의 키값과 매칭
+    change = False # 변환성공한 경우 T
+
+    if bin == "" : # 아무값도 안들어왔을 경우
+        return(change, oct)
+
+    for ch in bin :
+        if ch != '0' and ch != '1' : # 이진수가 아닐경우
+            return change, oct
+
+    while len(bin)%3 != 0 : # 3자리로 떨어질때까지 앞에 0을 붙임
+        bin = '0'+bin
+
+    for i in range(len(bin)//3) : # 3자리로 끊어서 접근
+        temp = bin[i*3:i*3+3]
+        oct += o2b[temp]
+
+    change = True
+    return (change, oct)
+
+
+while True :
+    bin = input("2진수입력 : ")
+    (confirm, oct) = bin2oct(bin)
+    if confirm :
+        print(" =>", bin, ":", oct)
+    else :
+        print("= > 2진수가 아니여서 종료")
         break

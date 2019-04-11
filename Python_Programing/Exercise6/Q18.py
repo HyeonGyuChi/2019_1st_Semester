@@ -11,6 +11,13 @@ def search_index(arr, key) :
                 find = True
                 index = row, col
                 break
+    ''' 파이썬처럼 짜기
+    for row in range(len(arr)) :
+        if key in arr[row] : 
+            find = True
+            index = row, arr[row].index(key)
+            break
+    '''
 
     return find, index
 
