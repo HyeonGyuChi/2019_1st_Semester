@@ -97,4 +97,6 @@ local.properties
 *.tar.gz
 *.rar
 
+# Python_Programing
 
+.idea
