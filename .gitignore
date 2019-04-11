@@ -1,0 +1,9 @@
+# DataScience
+
+DataScience/*
+!DataScience/Rscripts
+*.Rhistory
+*.RData
+
+
+
