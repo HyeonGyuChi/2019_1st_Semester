@@ -4,6 +4,7 @@ DataScience/*
 !DataScience/Rscripts
 *.Rhistory
 *.RData
+*.ini
 
 # DataStructure Eclipse & Java
 ### Eclipse ###
