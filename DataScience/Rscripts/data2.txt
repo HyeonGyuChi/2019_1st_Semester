@@ -1,0 +1,10 @@
+#data2.txt, 측정위치 데이터
+id      location
+kim1    seoul
+min2    busan
+kim3    seoul
+lee4    busan
+park5   seoul
+sim6    busan
+ann7    seoul
+nam8    busan

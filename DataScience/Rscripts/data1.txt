@@ -1,0 +1,10 @@
+#data1.txt 계절별 온도습도 측정데이터
+id,temperature,humidity,season
+kim1,15.5,45,spring
+min2,22.3,50,spring
+kim3,30.3,60,summer
+lee4,35.2,70,summer
+park5,22.2,55,fall
+sim6,18.5,50,fall
+ann7,-5.6,40,winter
+nam8,-10.6,35,winter
