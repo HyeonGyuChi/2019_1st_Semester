@@ -35,7 +35,7 @@ public class PolyTest {
 		System.out.println();
 		
 		Poly E = A.multiPoly(B);
-		System.out.println("다항식 E(x) = A(x) * B(x) = ");
+		System.out.print("다항식 E(x) = A(x) * B(x) = ");
 		E.printPoly();
 		System.out.println();
 
