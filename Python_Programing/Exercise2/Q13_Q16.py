@@ -9,7 +9,7 @@ print(0xFF00 & 0x00FF)
 print(0xFF00 | 0x00FF)  ## a = (pow(2, 15)-1) + pow(2, 15) // unsigned 최대값
 print(0xFF00 ^ 0x00FF)
 print("----- 16 ----- ")
-## and or not 예제
+## and or not 예제m,
 on = True
 off = False
 

@@ -53,11 +53,11 @@ sort_boston = boston[,sort_index]
 # 높은특징 4개의 데이터 분포확인
 boxplot(sort_boston[1:4], main="medv기준 상관도가 높은 4가지 특징들의 데이터분포")
 ```
-![medv4](/image/final/cor4.png)
+![medv4](./image/final/cor4.png)
 ```R
 pairs(sort_boston[1:4])
 ```
-![pair4](/image/final/pair4.png)
+![pair4](./image/final/pair4.png)
 
 
 ```R
@@ -69,7 +69,7 @@ ggplot(boston, aes(x=boston$medv, y=boston$rm)) +
     geom_smooth(method=lm) +
       labs(title="BOSTON | rm per medv", x = "medv", y ="rm", subtitle=paste("주거지 가격 별 방 개수 | 상관도 (cor) : ", round(cor(boston$medv, boston$rm),3)))
 ```
-![rmmedv](/image/final/rmmedv.png)
+![rmmedv](./image/final/rmmedv.png)
 
 ```R
 # 이상치 체크
@@ -80,7 +80,7 @@ outindex = which(sort_boston$rm %in% outvalue) # outlier가 있는 값의 index
 plot(boston$rm, xlab="index", ylab="rm", main="RM의 평명분포도")
 points(outindex, outvalue, col="red", pch="v") # outlier 체크
 ```
-![outlier](/image/final/outlier.png)
+![outlier](./image/final/outlier.png)
 
 ```R
 # Q1~Q3 25% 75% 사이
@@ -96,7 +96,7 @@ uw = Q3+iqr*1.5
 abline(h=lw, col="orange")
 abline(h=uw, col="orange")
 ```
-![iqr](/image/final/iqr.png)
+![iqr](./image/final/iqr.png)
 
 ```R
 # 회귀분석
@@ -138,7 +138,7 @@ F-statistic: 471.8 on 1 and 504 DF,  p-value: < 2.2e-16
 abline(fit1, col="blue")
 title(sub = "y(가격) = -9.102109*x(방개수) - 34.670621")
 ```
-![fit1](/image/final/fit1.png)
+![fit1](./image/final/fit1.png)
 
 ```R
 # 예측 (방이 10개일때 가격은?) 56.35047
@@ -186,7 +186,7 @@ F-statistic: 353.3 on 3 and 502 DF,  p-value: < 2.2e-16
 # 가중치 그래프
 barplot(fit2$coefficients)
 ```
-![w3](/image/final/w3.png)
+![w3](./image/final/w3.png)
 ```R
 #예측 16.89..
 > predict(fit2, newdata = data.frame(lstat=5.21, rm=4, ptratio=18), interval="confidence")

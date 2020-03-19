@@ -1,7 +1,10 @@
 # DataScience
 
-DataScience/*
-!DataScience/Rscripts
+# DataScience/*
+# !DataScience/Rscripts
+
+
+
 *.Rhistory
 *.RData
 *.ini
@@ -101,3 +104,8 @@ local.properties
 # Python_Programing
 
 .idea
+*.jpg
+*.gif
+*.txt
+*.png
+*.csv

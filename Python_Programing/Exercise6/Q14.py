@@ -9,3 +9,4 @@ list = []
 for _ in range(100000) : # 10회
     list.append(random.randrange(1,100))# 1~101미만의 난수생성(정수)
     # list.append(random.randint(1,100))
+print(list)
